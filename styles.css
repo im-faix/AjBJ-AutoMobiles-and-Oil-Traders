@@ -1,0 +1,45 @@
+/* Default styles */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for tablets */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+/* Flexible layout */
+.header-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .header-icons {
+        flex-direction: column;
+    }
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Touchscreen optimization */
+a, button {
+    min-width: 48px;
+    min-height: 48px;
+}
