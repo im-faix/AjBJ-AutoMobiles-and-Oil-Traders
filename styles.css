@@ -26,6 +26,7 @@ header{
     justify-content: space-around;
     align-items: center;
     height: 25px;
+    color: transparent;
     
 }
 .header-icons a{
@@ -46,3 +47,16 @@ header{
     }
 }
 
+.images
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
