@@ -4,46 +4,131 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
-}
-
-/* Styles for tablets */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-}
-
-/* Styles for mobile devices */
-@media (max-width: 480px) {
-    body {
-        font-size: 12px;
-    }
-}
-
-/* Flexible layout */
-header{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+  }
+  
+  /* Main content area */
+  main {
+    flex-grow: 1; /* Push the footer to the bottom */
+    padding: 10px 5px 25px;
+  }
+  
+  /* Header styles */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 20px; /* Space between links */
+  }
+  
+  .header-icons a {
+    text-decoration: none;
+    color: rgb(86, 137, 49);
+    font-family: cursive;
+    font-size: 15px;
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    height: 200px;
+  }
+  
+  .footer-content {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    height: 30px;
-    color: transparent;
-    
-}
-.header-icons a{
-    text-decoration: none;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
     margin: 10px;
-    font-family : cursive;
-    margin: 15px;
-    bottom: 15px;
-    top: 10px;
-    color: rgb(86, 137, 49);
-
-}
-
-
-@media (max-width: 768px) {
-    .header-icons {
-        flex-direction: column;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+  }
+  
+  /* Social Link Styling */
+  .social-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .social-link:hover {
+    color: #0073e6;
+  }
+  
+  .facebook-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Footer Bottom Styling */
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 12px;
+    margin: 0;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
     }
-}
-
+  
+    .header-icons {
+      flex-direction: row; /* Keep links in a row for tablets */
+      gap: 15px;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  
+    .header-icons {
+      flex-direction: column; /* Stack links vertically for mobile */
+      gap: 10px;
+    }
+  }
